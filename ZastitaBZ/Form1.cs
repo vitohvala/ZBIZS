@@ -12,11 +12,20 @@ namespace ZastitaBZ
 {
     public partial class Form1 : Form
     {
+        //public static Panel panel1 {  get; set; }
         public Form1()
         {
             InitializeComponent();
+            globalne.form1 = this;
+            globalne.panel1 = panel1;
+
             Logovanje logpanel = new Logovanje();
-            PromeniUC.promeniUC(logpanel, panel1);
+            PromeniUC.promeniUC(logpanel, globalne.panel1);
+        }
+
+        private void panel1_Paint(object sender, PaintEventArgs e)
+        {
+
         }
     }
 }

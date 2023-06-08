@@ -39,6 +39,7 @@ namespace ZastitaBZ
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(697, 358);
             this.panel1.TabIndex = 0;
+            this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
             // 
             // Form1
             // 
@@ -55,7 +56,7 @@ namespace ZastitaBZ
 
         #endregion
 
-        private System.Windows.Forms.Panel panel1;
+        public System.Windows.Forms.Panel panel1;
     }
 }
 
