@@ -40,3 +40,7 @@ C:\Users\da\Desktop\ZBIZS\ZastitaBZ\obj\Debug\ZastitaBZ.csproj.CopyComplete
 C:\Users\da\Desktop\ZBIZS\ZastitaBZ\obj\Debug\ZastitaBZ.exe
 C:\Users\da\Desktop\ZBIZS\ZastitaBZ\obj\Debug\ZastitaBZ.pdb
 C:\Users\da\Desktop\ZBIZS\ZastitaBZ\obj\Debug\ZastitaBZ.Registracija.resources
+C:\Users\da\Desktop\ZastitaBZ\ZastitaBZ\obj\Debug\ZastitaBZ.Registracija.resources
+C:\Users\da\Desktop\ZastitaBZ\ZastitaBZ\obj\Debug\ZastitaBZ.BiranjeOkruga.resources
+C:\Users\da\Desktop\ZastitaBZ\ZastitaBZ\obj\Debug\ZastitaBZ.FinalniProzor.resources
+C:\Users\da\Desktop\ZastitaBZ\ZastitaBZ\obj\Debug\ZastitaBZ.Vrsta.resources

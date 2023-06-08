@@ -15,8 +15,7 @@ namespace ZastitaBZ
 {
     public partial class Registracija : UserControl
     {
-        public string jmbg, ime, prezime, email, username, lozinka;
-        public int telefon;
+        
         bool[] check = new bool[7];
 
         private void button2_Click(object sender, EventArgs e)
@@ -111,17 +110,13 @@ namespace ZastitaBZ
         }
         
         private void button1_Click(object sender, EventArgs e)
-        {
-            jmbg = jmbgtxt.Text;
-            ime = imetxt.Text;
-            prezime = prezimetxt.Text;
-            email = emailtxt.Text;
-            username = usernametxt.Text;
-            lozinka = lozinkatxt.Text;
-            telefon = int.Parse(telefontxt.Text);
+        {   
+            globalne.korisnik = new Korisnik(jmbgtxt.Text, imetxt.Text, prezimetxt.Text, emailtxt.Text,usernametxt.Text, lozinkatxt.Text, int.Parse(telefontxt.Text));
             bazaKontrol kon = new bazaKontrol();
             string upit = "INSERT INTO Korisnik(JMBG, Ime, Prezime, Telefon, Email, Korisnicko_ime, Lozinka) Values('" + 
-                jmbg + "','" + ime + "','" + prezime + "','" + telefon  +"','" + email + "','" + username + "','" + lozinka + "');";
+                globalne.korisnik.jmbg + "','" + globalne.korisnik.ime + "','" + globalne.korisnik.prezime + 
+                "','" + globalne.korisnik.telefon  +"','" + globalne.korisnik.email + "','" + globalne.korisnik.username +
+                "','" + globalne.korisnik.lozinka + "');";
             kon.izvrsiUpit(upit);
             //kon.reader.Close();
             kon.zatvori();

@@ -169,6 +169,7 @@
             this.lozinkatxt.Name = "lozinkatxt";
             this.lozinkatxt.Size = new System.Drawing.Size(299, 24);
             this.lozinkatxt.TabIndex = 13;
+            this.lozinkatxt.UseSystemPasswordChar = true;
             // 
             // label7
             // 

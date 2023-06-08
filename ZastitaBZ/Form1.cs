@@ -12,7 +12,6 @@ namespace ZastitaBZ
 {
     public partial class Form1 : Form
     {
-        //public static Panel panel1 {  get; set; }
         public Form1()
         {
             InitializeComponent();

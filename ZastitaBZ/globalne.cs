@@ -11,5 +11,6 @@ namespace ZastitaBZ
     {
         public static Form1 form1 { get; set; }
         public static Panel panel1 { get; set; }    
+        public static Korisnik korisnik { get; set; }
     }
 }

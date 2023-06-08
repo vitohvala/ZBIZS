@@ -22,6 +22,7 @@ namespace ZastitaBZ
         {
             Registracija reg = new Registracija();
             PromeniUC.promeniUC(reg, globalne.panel1);
+            
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -33,10 +34,20 @@ namespace ZastitaBZ
             string upit = "SELECT * from Korisnik where Korisnicko_ime = '" + user + "' AND Lozinka = '" + pass  + "';";
             kon.izvrsiUpit(upit);
             if (kon.reader.HasRows)
-                MessageBox.Show("IMA");
+            {
+                //MessageBox.Show("IMA");
+                textBox1.Text = textBox2.Text = "";
+
+                globalne.korisnik = new Korisnik();
+                globalne.korisnik.username = user;
+                
+                BiranjeOkruga okrug = new BiranjeOkruga();
+                PromeniUC.promeniUC(okrug, globalne.panel1);
+
+            }
             else
             {
-                textBox1.Text = textBox2.Text ="";
+                textBox1.Text = textBox2.Text = "";
 
                 MessageBox.Show("Pogresno Uneto Korisnicko Ime ili Lozinka");
             }
