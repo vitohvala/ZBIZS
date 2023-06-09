@@ -17,24 +17,48 @@ namespace ZastitaBZ
         public void izvrsiUpit(string upit) {
             try
             {
-                konekcija.Open();
+                if (konekcija.State == ConnectionState.Closed)
+                {
+                    konekcija.Open();
+                }
+                //konekcija.Open();
                 cmd = new SQLiteCommand(upit, konekcija);
                 reader = cmd.ExecuteReader();
+               
             }
             catch (Exception ex) {
                 MessageBox.Show(ex.Message);
             }
         }
         public void popuni(DataGridView grid, string upit){
-            //izvrsiUpit(upit);
             SQLiteDataAdapter adapter = new SQLiteDataAdapter(upit, konekcija);
             DataTable table = new DataTable();
             adapter.FillSchema(table, SchemaType.Source);
             adapter.Fill(table);
             grid.DataSource = table;
         }
+        public void puniCombo(ComboBox Box, string upit, string tab) {
+            SQLiteCommand komanda = new SQLiteCommand(upit, konekcija);
+            SQLiteDataAdapter adapter = new SQLiteDataAdapter(komanda);
+            DataTable tabela = new DataTable();
+            adapter.Fill(tabela);
+
+            Box.DataSource = tabela;
+            Box.DisplayMember = tab;
+        }
         public void zatvori() {
-            if (konekcija != null) { 
+            if (reader != null && !reader.IsClosed)
+            {
+                reader.Close();
+            }
+
+            if (cmd != null)
+            {
+                cmd.Dispose();
+            }
+
+            if (konekcija != null && konekcija.State != ConnectionState.Closed)
+            {
                 konekcija.Close();
             }
         }

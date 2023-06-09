@@ -121,6 +121,8 @@ namespace ZastitaBZ
             //kon.reader.Close();
             kon.zatvori();
             MessageBox.Show("Uspesno Ste Se Registrivali!");
+            BiranjeOkruga okrug = new BiranjeOkruga();
+            PromeniUC.promeniUC(okrug, globalne.panel1);
 
         }
     }

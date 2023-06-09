@@ -33,17 +33,22 @@ namespace ZastitaBZ
             bazaKontrol kon = new bazaKontrol();
             string upit = "SELECT * from Korisnik where Korisnicko_ime = '" + user + "' AND Lozinka = '" + pass  + "';";
             kon.izvrsiUpit(upit);
-            if (kon.reader.HasRows)
+            if (kon.reader.Read())
             {
-                //MessageBox.Show("IMA");
                 textBox1.Text = textBox2.Text = "";
 
                 globalne.korisnik = new Korisnik();
-                globalne.korisnik.username = user;
-                
+                globalne.korisnik.jmbg = kon.reader["JMBG"].ToString();
+                globalne.korisnik.username = kon.reader["Korisnicko_ime"].ToString(); ;
+                globalne.korisnik.lozinka = kon.reader["Lozinka"].ToString();
+                globalne.korisnik.email = kon.reader["Email"].ToString();
+                globalne.korisnik.ime = kon.reader["Ime"].ToString();
+                globalne.korisnik.prezime = kon.reader["Prezime"].ToString();
+                globalne.korisnik.telefon = int.Parse(kon.reader["Telefon"].ToString());
+
                 BiranjeOkruga okrug = new BiranjeOkruga();
                 PromeniUC.promeniUC(okrug, globalne.panel1);
-
+              
             }
             else
             {
@@ -52,6 +57,11 @@ namespace ZastitaBZ
                 MessageBox.Show("Pogresno Uneto Korisnicko Ime ili Lozinka");
             }
             kon.zatvori();
+        }
+
+        private void checkBox2_CheckedChanged(object sender, EventArgs e)
+        {
+            textBox2.UseSystemPasswordChar = false;
         }
     }
 }

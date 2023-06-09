@@ -44,6 +44,7 @@ namespace ZastitaBZ
             this.comboBox1.Name = "comboBox1";
             this.comboBox1.Size = new System.Drawing.Size(488, 24);
             this.comboBox1.TabIndex = 0;
+            this.comboBox1.SelectedIndexChanged += new System.EventHandler(this.comboBox1_SelectedIndexChanged);
             // 
             // label1
             // 
@@ -62,7 +63,7 @@ namespace ZastitaBZ
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.Location = new System.Drawing.Point(25, 70);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(96, 16);
+            this.label2.Size = new System.Drawing.Size(95, 16);
             this.label2.TabIndex = 2;
             this.label2.Text = "Odaberi Okrug";
             // 

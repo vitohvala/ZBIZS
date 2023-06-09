@@ -92,6 +92,18 @@
     <Compile Include="Logovanje.Designer.cs">
       <DependentUpon>Logovanje.cs</DependentUpon>
     </Compile>
+    <Compile Include="PocetnaUC.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="PocetnaUC.Designer.cs">
+      <DependentUpon>PocetnaUC.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Profil.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Profil.Designer.cs">
+      <DependentUpon>Profil.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="PromeniUC.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -100,6 +112,24 @@
     </Compile>
     <Compile Include="Registracija.Designer.cs">
       <DependentUpon>Registracija.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Upozorenje.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Upozorenje.Designer.cs">
+      <DependentUpon>Upozorenje.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Lokacije.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Lokacije.Designer.cs">
+      <DependentUpon>Lokacije.cs</DependentUpon>
+    </Compile>
+    <Compile Include="valProfil.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="valProfil.Designer.cs">
+      <DependentUpon>valProfil.cs</DependentUpon>
     </Compile>
     <Compile Include="Vrsta.cs">
       <SubType>UserControl</SubType>
@@ -119,6 +149,12 @@
     <EmbeddedResource Include="Logovanje.resx">
       <DependentUpon>Logovanje.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="PocetnaUC.resx">
+      <DependentUpon>PocetnaUC.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Profil.resx">
+      <DependentUpon>Profil.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
@@ -130,6 +166,15 @@
     </Compile>
     <EmbeddedResource Include="Registracija.resx">
       <DependentUpon>Registracija.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Upozorenje.resx">
+      <DependentUpon>Upozorenje.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Lokacije.resx">
+      <DependentUpon>Lokacije.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="valProfil.resx">
+      <DependentUpon>valProfil.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Vrsta.resx">
       <DependentUpon>Vrsta.cs</DependentUpon>

@@ -18,13 +18,14 @@ namespace ZastitaBZ
         {
             InitializeComponent();
         }
-        private void load_file(string filePath)
+        private void povezi()
         {
             try
             {
-                string[] lines = File.ReadAllLines(filePath);
-
-                comboBox1.Items.AddRange(lines);
+                string upit = "SELECT naziv FROM Lokacija";
+                bazaKontrol kon = new bazaKontrol();
+                kon.puniCombo(comboBox1, upit, "naziv");
+                kon.zatvori();
             }
             catch (Exception ex)
             {
@@ -33,22 +34,41 @@ namespace ZastitaBZ
         }
         private void BiranjeOkruga_Load(object sender, EventArgs e)
         {
-            load_file("listaokruga.txt");
+            button1.Enabled = false;
+            povezi();
             label1.Text = globalne.korisnik.username.ToString();
         }
 
         private void button2_Click(object sender, EventArgs e)
         {
-            Logovanje logpanel = new Logovanje();
-            PromeniUC.promeniUC(logpanel, globalne.panel1);
+            DialogResult dialog = new DialogResult();
+            Upozorenje upozorenje = new Upozorenje("Da li ste sigurni da želite da se odjavite?");
+            dialog = upozorenje.ShowDialog();
+            if (upozorenje.DialogResult == DialogResult.Yes)
+            {
+                Logovanje logovanjeUC = new Logovanje();
+                PromeniUC.promeniUC(logovanjeUC, globalne.panel1);
+            }
+            else if (upozorenje.DialogResult == DialogResult.No)
+            {
+                upozorenje.Dispose();
+            }
+           
         }
 
         private void button1_Click(object sender, EventArgs e)
         {
-           // globalne.korisnik.okrug = "ww";
+            DataRowView selectedRow = (DataRowView)comboBox1.SelectedItem;
+            globalne.korisnik.okrug = selectedRow["naziv"].ToString();
+            globalne.res = true;
             FinalniProzor fin = new FinalniProzor();
             PromeniUC.promeniUC(fin, globalne.panel1);
 
+        }
+
+        private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            button1.Enabled = (string.IsNullOrEmpty(comboBox1.SelectedItem.ToString())) ? false : true;
         }
     }
 }

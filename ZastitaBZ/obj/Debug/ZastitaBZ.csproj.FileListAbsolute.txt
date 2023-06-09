@@ -44,3 +44,11 @@ C:\Users\da\Desktop\ZastitaBZ\ZastitaBZ\obj\Debug\ZastitaBZ.Registracija.resourc
 C:\Users\da\Desktop\ZastitaBZ\ZastitaBZ\obj\Debug\ZastitaBZ.BiranjeOkruga.resources
 C:\Users\da\Desktop\ZastitaBZ\ZastitaBZ\obj\Debug\ZastitaBZ.FinalniProzor.resources
 C:\Users\da\Desktop\ZastitaBZ\ZastitaBZ\obj\Debug\ZastitaBZ.Vrsta.resources
+C:\Users\da\Desktop\ZBIZS\ZastitaBZ\obj\Debug\ZastitaBZ.BiranjeOkruga.resources
+C:\Users\da\Desktop\ZBIZS\ZastitaBZ\obj\Debug\ZastitaBZ.FinalniProzor.resources
+C:\Users\da\Desktop\ZBIZS\ZastitaBZ\obj\Debug\ZastitaBZ.Vrsta.resources
+C:\Users\da\Desktop\ZBIZS\ZastitaBZ\obj\Debug\ZastitaBZ.Upozorenje.resources
+C:\Users\da\Desktop\ZBIZS\ZastitaBZ\obj\Debug\ZastitaBZ.PocetnaUC.resources
+C:\Users\da\Desktop\ZBIZS\ZastitaBZ\obj\Debug\ZastitaBZ.Lokacije.resources
+C:\Users\da\Desktop\ZBIZS\ZastitaBZ\obj\Debug\ZastitaBZ.Profil.resources
+C:\Users\da\Desktop\ZBIZS\ZastitaBZ\obj\Debug\ZastitaBZ.valProfil.resources
