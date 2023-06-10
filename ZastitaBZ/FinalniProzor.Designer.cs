@@ -31,7 +31,7 @@ namespace ZastitaBZ
         {
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.pocetnaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.pretragaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.Biljkaitem = new System.Windows.Forms.ToolStripMenuItem();
             this.zivotinjaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.lokacijeToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.UsernameItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -45,7 +45,7 @@ namespace ZastitaBZ
             // 
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.pocetnaToolStripMenuItem,
-            this.pretragaToolStripMenuItem,
+            this.Biljkaitem,
             this.zivotinjaToolStripMenuItem,
             this.lokacijeToolStripMenuItem,
             this.UsernameItem});
@@ -62,12 +62,12 @@ namespace ZastitaBZ
             this.pocetnaToolStripMenuItem.Text = "Pocetna";
             this.pocetnaToolStripMenuItem.Click += new System.EventHandler(this.pocetnaToolStripMenuItem_Click);
             // 
-            // pretragaToolStripMenuItem
+            // Biljkaitem
             // 
-            this.pretragaToolStripMenuItem.Name = "pretragaToolStripMenuItem";
-            this.pretragaToolStripMenuItem.Size = new System.Drawing.Size(47, 20);
-            this.pretragaToolStripMenuItem.Text = "Biljka";
-            this.pretragaToolStripMenuItem.Click += new System.EventHandler(this.pretragaToolStripMenuItem_Click);
+            this.Biljkaitem.Name = "Biljkaitem";
+            this.Biljkaitem.Size = new System.Drawing.Size(47, 20);
+            this.Biljkaitem.Text = "Biljka";
+            this.Biljkaitem.Click += new System.EventHandler(this.BijkaItem_Click);
             // 
             // zivotinjaToolStripMenuItem
             // 
@@ -95,7 +95,7 @@ namespace ZastitaBZ
             // mojProfilToolStripMenuItem
             // 
             this.mojProfilToolStripMenuItem.Name = "mojProfilToolStripMenuItem";
-            this.mojProfilToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.mojProfilToolStripMenuItem.Size = new System.Drawing.Size(126, 22);
             this.mojProfilToolStripMenuItem.Text = "Moj Profil";
             this.mojProfilToolStripMenuItem.Click += new System.EventHandler(this.mojProfilToolStripMenuItem_Click);
             // 
@@ -132,7 +132,7 @@ namespace ZastitaBZ
         #endregion
 
         private System.Windows.Forms.MenuStrip menuStrip1;
-        private System.Windows.Forms.ToolStripMenuItem pretragaToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem Biljkaitem;
         private System.Windows.Forms.ToolStripMenuItem zivotinjaToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem UsernameItem;
         private System.Windows.Forms.Panel panel1;

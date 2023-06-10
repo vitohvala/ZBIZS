@@ -78,7 +78,6 @@ namespace ZastitaBZ
             else
             {
                 upit = "SELECT Korisnicko_ime from Korisnik where JMBG = '" + jmbgtxt.Text + "';";
-                //proverabr(jmbgtxt, jmbg_help, 0);
                 proveriBazu(jmbgtxt, jmbg_help, 0, upit);
             }
 
@@ -111,7 +110,8 @@ namespace ZastitaBZ
         
         private void button1_Click(object sender, EventArgs e)
         {   
-            globalne.korisnik = new Korisnik(jmbgtxt.Text, imetxt.Text, prezimetxt.Text, emailtxt.Text,usernametxt.Text, lozinkatxt.Text, int.Parse(telefontxt.Text));
+            globalne.korisnik = new Korisnik(jmbgtxt.Text, imetxt.Text, prezimetxt.Text, 
+                                            emailtxt.Text,usernametxt.Text, lozinkatxt.Text, int.Parse(telefontxt.Text));
             bazaKontrol kon = new bazaKontrol();
             string upit = "INSERT INTO Korisnik(JMBG, Ime, Prezime, Telefon, Email, Korisnicko_ime, Lozinka) Values('" + 
                 globalne.korisnik.jmbg + "','" + globalne.korisnik.ime + "','" + globalne.korisnik.prezime + 

@@ -103,6 +103,7 @@ namespace ZastitaBZ
                 ime_lat = row.Cells[1].Value.ToString();
             }
         }
+
         private void button3_Click(object sender, EventArgs e)
         {
             string sqlcmd;

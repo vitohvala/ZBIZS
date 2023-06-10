@@ -137,13 +137,11 @@ namespace ZastitaBZ
                     int tri = int.Parse(textBox3.Text);
                     string cet = textBox4.Text;
                     Regex date = new Regex(@"^[0-9]{4}\-(0[1-9]|1[012])\-(0[1-9]|[12][0-9]|3[01])$");
-                    if (date.IsMatch(cet))
+                    if (which == "Animal")
                     {
-                        upit = "UPDATE Vrsta SET Lokalni_naziv = '" + lok_n + "', ";
-                        upit += (which == "Animal") ? " S_broj_prstena = '" + tri + "', Staniste = '" + cet + "' " :
-                                                    " Broj_odluke = '" + tri + "', Datum_stupanja_odluke = date('" + cet + "') ";
-                        upit += "WHERE Latinski_naziv = '" + lat_naziv + "';";
-                        //MessageBox.Show(upit);
+                        upit = "UPDATE Vrsta SET Latinski_naziv = '" + lat_naziv + "', Lokalni_naziv = '" + lok_n +
+                               "', S_Broj_prstena = '" + tri + "', Staniste = '" + cet + "' " +
+                               "WHERE Latinski_naziv = '" + lat_naziv + "';";
                         bazaKontrol koneksn = new bazaKontrol();
                         koneksn.izvrsiUpit(upit);
                         koneksn.zatvori();
@@ -151,8 +149,27 @@ namespace ZastitaBZ
                         popuni();
                         dataGridView1.Refresh();
                     }
+                    else if(which == "Biljka") {
+                        if (date.IsMatch(cet))
+                        {
+                            upit = "UPDATE Vrsta SET Lokalni_naziv = '" + lok_n + "', ";
+                            upit += " Broj_odluke = '" + tri + "', Datum_stupanja_odluke = date('" + cet + "') ";
+                            upit += "WHERE Latinski_naziv = '" + lat_naziv + "';";
+
+                            bazaKontrol koneksn = new bazaKontrol();
+                            koneksn.izvrsiUpit(upit);
+                            koneksn.zatvori();
+
+                            popuni();
+                            dataGridView1.Refresh();
+                        }
+                        else
+                        {
+                            MessageBox.Show("Unesite U formatu yyyy-mm-dd!");
+                        }
+                    }
                     else {
-                        MessageBox.Show("Unesite U formatu yyyy-mm-dd!");
+                        MessageBox.Show("Greska u unosu");
                     }
                 }
                 else if (upozorenje.DialogResult == DialogResult.No)
@@ -199,6 +216,9 @@ namespace ZastitaBZ
                             bazaKontrol kon = new bazaKontrol();
                             kon.izvrsiUpit(upit);
                             kon.zatvori();
+
+                            popuni();
+                            dataGridView1.Refresh();
                         }
                         else
                         {

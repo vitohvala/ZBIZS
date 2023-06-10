@@ -51,9 +51,9 @@ namespace ZastitaBZ
            
         }
 
-        private void pretragaToolStripMenuItem_Click(object sender, EventArgs e)
+        private void BijkaItem_Click(object sender, EventArgs e)
         {
-            boje(pretragaToolStripMenuItem);
+            boje(Biljkaitem);
             Vrsta vrsta = new Vrsta();
             PromeniUC.promeniUC(vrsta, panel1);
         }
